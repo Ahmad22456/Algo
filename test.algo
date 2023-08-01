@@ -1,0 +1,62 @@
+ALGORITHM check
+
+VAR
+
+count_length : INTEGER := 0;
+count_words : INTEGER := 0;
+count_vowels : INTEGER := 0;
+n : INTEGER := 1;               // n is the number to test
+c1 : CHAR := 'i';
+c2 : CHAR := 'n';
+c3 : CHAR := 't';
+c4 : CHAR := 'r';
+c5 : CHAR := 'o';
+c6 : CHAR := ' ';
+c7 : CHAR := 't';
+c8 : CHAR := 'o';
+c9 : CHAR := ' ';
+c10 : CHAR := 'a';
+c11 : CHAR := 'l';
+c12 : CHAR := 'g';
+c13 : CHAR := 'o';
+c14 : CHAR := '.';
+ 
+BEGIN
+ WHILE ( cn := <> c14 ) DO
+
+ /* while cn isn't equal to point (c14)
+ then it will repeat the instruction
+ until the condition is false 
+   */
+
+   IF (cn := ' ') THEN     // if cn equals ' ' (space) +1 else nothing
+
+   count_words :=  count_words + 1 ;
+
+  ELSE
+
+   count_words := count_words ;
+
+   END_IF
+
+   IF (cn := 'a' or 'e' or 'i' or 'o' or 'u') THEN  // if cn equals any of the vowels +1 else nothing
+
+   count_vowels :=  count_vowels + 1 ;
+
+  ELSE
+
+   count_vowels := count_vowels ;
+
+   END_IF
+
+   n := n + 1; // increment n by 1
+
+   count_length := count_length +1; // increment the count_length by 1
+
+ END_WHILE
+
+ Write(count_length)
+ Write(count_words)
+ Write(count_vowels)
+
+END
